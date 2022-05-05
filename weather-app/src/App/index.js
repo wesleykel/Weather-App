@@ -5,6 +5,7 @@ import './App.css';
 import SearchBar from './components/SearchBar';
 //import SearchButton from './components/SearchButton';
 import ApiCall from './components/ApiCall';
+import ResultsContainer from './components/ResultsContainer';
 
 
 export const SearchContext = createContext()
@@ -19,9 +20,10 @@ const [result, setResult] = useState({})
     <div className="App">
   <SearchContext.Provider value={{city,setCity ,result, setResult}}>
 
-  <Title/>
-  <SearchBar/>
-   <ApiCall/>
+ <Title/>
+<SearchBar/>
+<ApiCall/>
+<ResultsContainer/>
   
  </SearchContext.Provider>
     </div>

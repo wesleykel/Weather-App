@@ -5,12 +5,12 @@ import { SearchContext } from '../..'
 const SearchBar = () => {
 
 
-const {setCity} = useContext(SearchContext)
+const {city, setCity} = useContext(SearchContext)
 
 return (
         <div>
         <label>Search</label>
-          <input type={"text"} onChange={(e)=>setCity(e.target.value)} placeholder={"City"}></input>  
+          <input value={city} type={"text"} onChange={(e)=>setCity(e.target.value)} placeholder={"City"}></input>  
         </div>
     )
 }

@@ -4,7 +4,8 @@ import { SearchContext } from '../..'
 import SearchButton from '../SearchButton'
 const ApiCall = () => {
 const WEATHER_API=process.env.REACT_APP_API_KEY 
-let {city ,result, setResult} = useContext(SearchContext) 
+
+let {city , setResult} = useContext(SearchContext) 
 
 const [longAndLat , setLongAndLat] = useState({})
  
@@ -18,13 +19,13 @@ const getLongAndLat =()=>{
 
 const  getWeather =()=>{
 
-fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${longAndLat.lat}&lon=${longAndLat.lon}&exclude={part}&appid=${WEATHER_API}`)
+fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${longAndLat.lat}&lon=${longAndLat.lon}&units=metric&exclude={part}&appid=${WEATHER_API}`)
 .then(response => response.json())
 .then(data => setResult(data));
 
 }
  
-console.log(result)
+
 
 
  useEffect(()=>{
