@@ -2,7 +2,7 @@ import style from "./SearchButton.module.css"
 import React from 'react'
 import { SearchContext } from '../..'
 import { useContext } from 'react'
-
+import FadeIn from "react-fade-in/lib/FadeIn"
 const SearchButton = ({prop1 , apiCall}) => {
     
     const {city, setCity} = useContext(SearchContext)
@@ -26,7 +26,9 @@ const SearchButton = ({prop1 , apiCall}) => {
     
     return (
         <div className={style.wrapper}>
-        <button onClick={apiCall} type='submit'>{prop1}</button>    
+        <FadeIn transitionDuration={700} delay={200}>
+        <button onClick={apiCall} type='submit'>{prop1}</button>  
+          </FadeIn>
         </div>
     )
 }

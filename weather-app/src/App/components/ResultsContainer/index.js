@@ -2,6 +2,8 @@ import style from "./MainResult.module.css"
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { SearchContext } from '../..'
+import FadeIn from "react-fade-in"
+
 
 const ResultsContainer = () => {
     const [temp, setTemp] =useState({})
@@ -41,10 +43,10 @@ console.log(searchedCity)
     return (
   <div>
  {searchedCity?<p className={style.result}>Search results for :{searchedCity}</p>: null}
- {searchedCity? <ul className={style.wrapper}>
-       <li>Temperature: {temp.temp}°c</li>
-       <li>Feels Like:{temp.feelsLike}°c</li>  
-       <li>Description: {temp.description} </li>  
+ {searchedCity?<FadeIn transitionDuration={800} delay={150}><ul className={style.wrapper}>
+       <li id={style.temp}>Temperature: {temp.temp}°c</li>
+       <li id={style.feelsLike}>Feels Like: {temp.feelsLike}°c</li>  
+       <li id={style.description}>{temp.description} </li>  
 {searchedCity?<div className={style.imgWrapper}>
        <img src={`http://openweathermap.org/img/wn/${temp.icon}@2x.png`} alt="weather" />
         </div>:null}
@@ -52,7 +54,7 @@ console.log(searchedCity)
        
 
 
-       </ul>:null}
+       </ul></FadeIn> :null}
 
 
         </div>

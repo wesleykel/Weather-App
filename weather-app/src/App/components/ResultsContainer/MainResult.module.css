@@ -1,37 +1,59 @@
 .wrapper{
 
-    border:1px royalblue solid;
+    border:2px lightgray solid;
+    border-radius: 10px;
     width:50em;
     margin:0 auto;
     padding:1em;
 list-style-type: none;
+background-color: #32292f;
 
 }
 
 .wrapper li{
 
 
-    border: 1px lime solid;
+   /* border: 1px lime solid;*/
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
+    color: white;
+}
+
+
+#temp{
+font-size: 2.5em;
+}
+
+#feelsLike{
+font-size: 1.5em;
+
+}
+#description{
+font-size: 1.5em;
+
 }
 .imgWrapper{
-
-    border:1px  green dashed;
-    width:fit-content;
+    border-radius: 10px;
+    border:1px  lightblue solid ;
+    width:100%;
     margin: 0 auto;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(135, 207, 235);
 }
 
 img{
 
-    border: 1px red solid;
+    /*border: 1px red solid;*/
    width: 10em;
    margin: 0 auto;
 }
 
 .result{
-    border:1px red solid;
-    padding:1em;
+    font-size: 1.8em;
+   /* border:1px red solid;*/
+    padding:.8em;
     width:50em;
     margin: 0 auto;
 text-align: center;}

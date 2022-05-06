@@ -1,17 +1,22 @@
 .wrapper{
 
-border:solid red 1px;
+/*border:solid red 1px;*/
 display:flex;
 flex-direction: row;
 padding:1em;
 }
 label{
-
+font-size: 1.5em;
     padding:0.5em;  
 }
 .input{
 padding:0.5em;
     width:50em;
     border-radius: 10px;
+    cursor: pointer;
    
+}
+::placeholder{
+
+    font-size: 1.5em;
 }
