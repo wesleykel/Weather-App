@@ -1,16 +1,16 @@
-
+import  style from "./Search.module.css"
 import { useContext } from 'react'
 import { SearchContext } from '../..'
-//import { useEffect } from 'react'
+
 const SearchBar = () => {
 
 
 const {city, setCity} = useContext(SearchContext)
 
 return (
-        <div>
+        <div className={style.wrapper}>
         <label>Search</label>
-          <input value={city} type={"text"} onChange={(e)=>setCity(e.target.value)} placeholder={"City"}></input>  
+          <input className={style.input} value={city} type={"text"} onChange={(e)=>setCity(e.target.value)} placeholder={"City"}></input>  
         </div>
     )
 }

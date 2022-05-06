@@ -2,7 +2,14 @@
   
 }
 
+.Search{
 
+  display:flex;
+  flex-direction: row;
+  border:1px green solid;
+ justify-content: center;
+ padding:2em;
+}
 
 
 

@@ -1,12 +1,13 @@
 import React from 'react'
-
+import ResultsContainer from '../ResultsContainer'
+import style from "./Title.module.css"
 const Title = () => {
 
 
 
     return (
-        <div>
-          <h1>Weather App</h1>  
+        <div className={style.wrapper}>
+          <h1 className={style.title}>Weather App</h1>  
 
         </div>
     )

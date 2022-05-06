@@ -21,8 +21,10 @@ const [result, setResult] = useState({})
   <SearchContext.Provider value={{city,setCity ,result, setResult}}>
 
  <Title/>
+ <div className="Search">
 <SearchBar/>
 <ApiCall/>
+</div>
 <ResultsContainer/>
   
  </SearchContext.Provider>

@@ -1,3 +1,4 @@
+import style from "./MainResult.module.css"
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { SearchContext } from '../..'
@@ -5,7 +6,6 @@ import { SearchContext } from '../..'
 const ResultsContainer = () => {
     const [temp, setTemp] =useState({})
     const [searchedCity, setSCity]=useState("")
-    const [bool , setBool] = useState(true)
     const{city ,setCity,result}=useContext(SearchContext) 
 
  console.log(city)   
@@ -36,21 +36,25 @@ setTemp({
 
   
     
-
+console.log(searchedCity)
     
     return (
-        <div>
-<p>Search results for :{searchedCity}</p> 
-        <ul>
+  <div>
+ {searchedCity?<p className={style.result}>Search results for :{searchedCity}</p>: null}
+ {searchedCity? <ul className={style.wrapper}>
        <li>Temperature: {temp.temp}°c</li>
        <li>Feels Like:{temp.feelsLike}°c</li>  
        <li>Description: {temp.description} </li>  
-
-
+{searchedCity?<div className={style.imgWrapper}>
        <img src={`http://openweathermap.org/img/wn/${temp.icon}@2x.png`} alt="weather" />
+        </div>:null}
+
+       
 
 
-       </ul>
+       </ul>:null}
+
+
         </div>
     )
 }

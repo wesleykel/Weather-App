@@ -1,0 +1,37 @@
+.wrapper{
+
+    border:1px royalblue solid;
+    width:50em;
+    margin:0 auto;
+    padding:1em;
+list-style-type: none;
+
+}
+
+.wrapper li{
+
+
+    border: 1px lime solid;
+    text-align: center;
+    padding: 1em;
+}
+.imgWrapper{
+
+    border:1px  green dashed;
+    width:fit-content;
+    margin: 0 auto;
+}
+
+img{
+
+    border: 1px red solid;
+   width: 10em;
+   margin: 0 auto;
+}
+
+.result{
+    border:1px red solid;
+    padding:1em;
+    width:50em;
+    margin: 0 auto;
+text-align: center;}
