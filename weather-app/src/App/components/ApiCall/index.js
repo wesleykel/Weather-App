@@ -11,7 +11,7 @@ const [longAndLat , setLongAndLat] = useState({})
  
 const getLongAndLat =()=>{
  
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${WEATHER_API}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${WEATHER_API}`)
     .then(response => response.json())
       .then(data => setLongAndLat({lat:data[0].lat ,lon:data[0].lon }));
 
