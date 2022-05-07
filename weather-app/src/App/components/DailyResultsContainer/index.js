@@ -3,32 +3,31 @@ import { useContext , useState ,useEffect } from 'react'
 import { SearchContext } from '../..'
 import DailyForecast from '../DailyForeCast'
 const DailyResults = () => {
-    //const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    
 
-    let {city ,result , dailyWeather, setDailyWeather} = useContext(SearchContext) 
+    let {result , dailyWeather} = useContext(SearchContext) 
     const [fourDays, setFourDays] = useState([])
     const [date ,setDate] = useState()
    
     
-    const weekday =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    //console.log(dailyWeather)
+    const [weekday, setWeekday] =useState(["Sunday" ,"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"])
+   
 
-    useEffect(()=>{
-
-        if(dailyWeather){
-            setFourDays(dailyWeather.splice(0,3))
-             setDate( new Date().getUTCDay())
-               
-             if(date === 6){
-               setDate(0)
-               
-           }
-     
+useEffect(()=>{
+ setDate(new Date().getUTCDay())
+        
+ 
+ if(dailyWeather){
+setFourDays(dailyWeather.splice(0,3))
                 }
                  
+    },[result])
 
-
-    },[dailyWeather])
+    if(date === 6){
+               
+        setDate(0)
+                   
+               }
     console.log(fourDays)
   console.log(weekday[date])
     return (
