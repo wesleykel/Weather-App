@@ -5,7 +5,7 @@ import SearchButton from '../SearchButton'
 const ApiCall = () => {
 const WEATHER_API=process.env.REACT_APP_API_KEY 
 
-let {city , setResult} = useContext(SearchContext) 
+let {city ,result ,setResult ,setError,error, dailyWeather, setDailyWeather} = useContext(SearchContext) 
 
 const [longAndLat , setLongAndLat] = useState({})
  
@@ -13,20 +13,20 @@ const getLongAndLat =()=>{
  
     fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${WEATHER_API}`)
     .then(response => response.json())
-      .then(data => setLongAndLat({lat:data[0].lat ,lon:data[0].lon }));
-
+      .then(data => setLongAndLat({lat:data[0].lat ,lon:data[0].lon }))
+      .catch(error => setError("Errors",error))
  } 
-
+console.log(error)
 const  getWeather =()=>{
 
-fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${longAndLat.lat}&lon=${longAndLat.lon}&units=metric&exclude={part}&appid=${WEATHER_API}`)
+fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${longAndLat.lat}&lon=${longAndLat.lon}&units=metric&exclude={}&appid=${WEATHER_API}`)
 .then(response => response.json())
-.then(data => setResult(data));
-
+.then(data => setResult(data))
+.then(error => console.error(error))
 }
  
 
-
+console.log(dailyWeather)
 
  useEffect(()=>{
 
@@ -37,7 +37,8 @@ getLongAndLat()
  useEffect(()=>{
 
 getWeather()
-
+setDailyWeather(result.daily)
+setError("")
  },[longAndLat])
 
 
