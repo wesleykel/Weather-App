@@ -41,7 +41,7 @@ getWeather()
  },[longAndLat])
 
 
- console.log(longAndLat.lat)
+// console.log(longAndLat.lat)
    
     return (
         <div>
