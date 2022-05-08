@@ -5,7 +5,7 @@ import SearchButton from '../SearchButton'
 const ApiCall = () => {
 const WEATHER_API=process.env.REACT_APP_API_KEY 
 
-let {city ,result ,setResult ,setError,error, dailyWeather, setDailyWeather} = useContext(SearchContext) 
+let {city ,setCity,result ,setResult ,setError,error, dailyWeather, setDailyWeather} = useContext(SearchContext) 
 
 const [longAndLat , setLongAndLat] = useState({})
  
@@ -43,10 +43,14 @@ setError("")
 
 
 // console.log(longAndLat.lat)
-   
+  const clearError =()=>{
+    setError("")
+    setCity("")
+    setDailyWeather("")
+  } 
     return (
         <div>
-      <SearchButton prop1={"Submit"}  apiCall={getLongAndLat}/>
+     {error?<SearchButton style={{backgroundColor:"blue"}}prop1={"Clear"} apiCall={clearError} a/> :<SearchButton prop1={"Submit"}  apiCall={getLongAndLat}/>}
         </div>
     )
 }
