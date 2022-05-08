@@ -10,11 +10,17 @@ font-size: 1.5em;
     padding:0.5em;  
 }
 .input{
-padding:0.2em;
-    width:50em;
+/*padding:0.2em;*/
+    width:30em;
     border-radius: 10px;
     cursor: pointer;
-   
+    font-size: 1.1em;
+   /* text-align: center;*/
+}
+.input:focus{
+border: none;
+text-align: center;
+font-size: 1.2em;
 }
 ::placeholder{
 

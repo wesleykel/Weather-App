@@ -9,9 +9,11 @@
 }
 
 .icon{
-background-color: rgb(135, 207, 235);
+/*background-color: rgb(135, 207, 235);*/
     width:70%;
     border-radius: 10px;
+    background: rgb(83,205,242);
+background: linear-gradient(0deg, rgba(83,205,242,1) 15%, rgba(182,212,228,1) 69%);
 }
 
 .wrapper .ul{

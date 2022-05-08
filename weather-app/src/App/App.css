@@ -12,9 +12,15 @@ body{
 
   display:flex;
   flex-direction: row;
- /* border:1px green solid;*/
+ /*border:1px green solid;*/
  justify-content: center;
- padding:2em;
+ padding:1em;
+ gap:20px;
+ background-color: #32292f41;
+ color:white;
+ width: 55%;
+ margin: 0 auto;
+ border-radius: 10px;
 }
 
 
