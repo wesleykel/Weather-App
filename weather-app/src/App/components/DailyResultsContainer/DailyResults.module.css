@@ -1,0 +1,9 @@
+.wrapper{
+padding: 1em;
+width: 69%;
+margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly ;
+   
+}

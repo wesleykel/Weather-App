@@ -1,9 +1,9 @@
 import React from 'react'
-
+import style from "./DailyForeCast.module.css"
 const DailyForecast = ({day ,temp ,low, descrip, picture}) => {
     return (
-        <div>
-            <ul>
+        <div className={style.wrapper}>
+            <ul className={style.ul}>
 <li>{day}</li>
 <li>{temp}</li>
 <li>{low}</li>
@@ -11,7 +11,7 @@ const DailyForecast = ({day ,temp ,low, descrip, picture}) => {
             </ul>
             <div>
 <p>{descrip}</p>
-<img src={`http://openweathermap.org/img/wn/${picture}@2x.png`} alt="icon"/>
+<img className={style.icon} src={`http://openweathermap.org/img/wn/${picture}@2x.png`} alt="icon"/>
             </div>
         </div>
     )

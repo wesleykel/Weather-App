@@ -3,14 +3,14 @@
 /*border:solid red 1px;*/
 display:flex;
 flex-direction: row;
-padding:1em;
+/*padding:1em;*/
 }
 label{
 font-size: 1.5em;
     padding:0.5em;  
 }
 .input{
-padding:0.5em;
+padding:0.2em;
     width:50em;
     border-radius: 10px;
     cursor: pointer;

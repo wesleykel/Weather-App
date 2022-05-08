@@ -1,10 +1,13 @@
 .wrapper{
 
-    /*border:1px solid dodgerblue;*/
-    text-align: center;
+    width:50%;
+    margin:0 auto;
+   color: #32292f;
+   /*background-color: #32292f;*/
 }
 
 .title{
-font-size: 3em;
+    text-align: center;
+font-size: 2.5em;
    /* border: 1px lime*/
 }

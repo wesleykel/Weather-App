@@ -1,6 +1,6 @@
 .wrapper{
 
-    border:2px lightgray solid;
+    /*border:2px lightgray solid;*/
     border-radius: 10px;
     width:50em;
     margin:0 auto;
@@ -53,7 +53,7 @@ img{
 .result{
     font-size: 1.8em;
    /* border:1px red solid;*/
-    padding:.8em;
+    padding:.4em;
     width:50em;
     margin: 0 auto;
 text-align: center;}
