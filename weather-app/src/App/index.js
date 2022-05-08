@@ -7,6 +7,7 @@ import SearchBar from './components/SearchBar';
 import ApiCall from './components/ApiCall';
 import ResultsContainer from './components/ResultsContainer';
 import DailyResults from './components/DailyResultsContainer';
+import ErrorMessage from './components/ErrorMessage';
 
 
 export const SearchContext = createContext()
@@ -24,13 +25,17 @@ const [dailyWeather, setDailyWeather]= useState([])
   <SearchContext.Provider value={{city,setCity ,result, setResult, error, setError ,dailyWeather, setDailyWeather}}>
 
  <Title/>
+ 
  <div className="Search">
+
 <SearchBar/>
 <ApiCall/>
 </div>
-<ResultsContainer/>
-<DailyResults/>
-  
+
+{error?<ErrorMessage/>:null}
+{error?null:<ResultsContainer/>}
+{error?null:<DailyResults/>}
+ 
  </SearchContext.Provider>
     </div>
 

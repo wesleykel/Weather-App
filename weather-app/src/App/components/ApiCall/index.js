@@ -14,7 +14,7 @@ const getLongAndLat =()=>{
     fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${WEATHER_API}`)
     .then(response => response.json())
       .then(data => setLongAndLat({lat:data[0].lat ,lon:data[0].lon }))
-      .catch(error => setError("Errors",error))
+      .catch(error => setError("Error",error))
  } 
 console.log(error)
 const  getWeather =()=>{

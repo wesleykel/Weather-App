@@ -45,11 +45,11 @@ setTemp({
   <div>
  {searchedCity?<p className={style.result}>Search results for : {upperCaseCity}</p>: null}
  {searchedCity?<FadeIn transitionDuration={800} delay={150}><ul className={style.wrapper}>
-       <li id={style.temp}>Temperature: {temp.temp}°c</li>
-       <li id={style.feelsLike}>Feels Like: {temp.feelsLike}°c</li>  
+       <li id={style.temp}>Temperature: {temp.temp}°</li>
+       <li id={style.feelsLike}>Feels Like: {temp.feelsLike}°</li>  
        <li id={style.description}>{temp.description} </li>  
 {searchedCity?<div className={style.imgWrapper}>
-       <img src={`http://openweathermap.org/img/wn/${temp.icon}@2x.png`} alt="weather" />
+<img src={`http://openweathermap.org/img/wn/${temp.icon}@2x.png`} alt="weather" />
         </div>:null}
 
        
