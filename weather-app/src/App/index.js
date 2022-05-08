@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { createContext } from 'react';
-import Title from './components/Title';
 import './App.css';
+import Title from './components/Title';
 import SearchBar from './components/SearchBar';
-//import SearchButton from './components/SearchButton';
 import ApiCall from './components/ApiCall';
 import ResultsContainer from './components/ResultsContainer';
 import DailyResults from './components/DailyResultsContainer';

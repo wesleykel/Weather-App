@@ -44,7 +44,7 @@ setTemp({
     return (
   <div>
  {searchedCity?<p className={style.result}>Search results for : {upperCaseCity}</p>: null}
- {searchedCity?<FadeIn transitionDuration={800} delay={150}><ul className={style.wrapper}>
+ {searchedCity?<FadeIn transitionDuration={1500} delay={550}><ul className={style.wrapper}>
        <li id={style.temp}>Temperature: {temp.temp}°</li>
        <li id={style.feelsLike}>Feels Like: {temp.feelsLike}°</li>  
        <li id={style.description}>{temp.description} </li>  
