@@ -26,3 +26,32 @@ font-size: 1.2em;
 
     font-size: 1.5em;
 }
+
+
+@media  only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px)  {
+ 
+label{
+
+font-size: 1em;
+padding-right: 10px;
+
+}
+
+    .input{
+font-size: 1em;
+       width: fit-content; 
+    }
+
+    ::placeholder{
+
+        font-size: 1em;
+    }
+    .input:focus{
+        border: none;
+        text-align: left;
+        font-size: 1em;
+        }
+
+}

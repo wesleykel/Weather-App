@@ -24,4 +24,18 @@ body{
 }
 
 
+@media  only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px)  {
+  
+
+.Search{
+
+padding: .5em;
+ width: 85%;
+gap: 20px;
+}
+
+  
+}
 

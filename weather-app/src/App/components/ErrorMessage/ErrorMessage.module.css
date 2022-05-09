@@ -6,3 +6,17 @@ font-size: 2em;
 text-align: center;
 color:red;
 }
+
+@media  only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px)  {
+
+    .errorMessage{
+
+        font-size: 1.5em;
+
+    }
+
+
+  
+}

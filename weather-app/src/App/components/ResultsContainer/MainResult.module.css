@@ -62,3 +62,20 @@ text-align: center;
 color:#32292f ;
 
 }
+
+@media  only screen 
+and (min-device-width: 375px)
+and (max-device-width: 812px){
+
+.wrapper{
+ width:80%
+
+
+}
+.result{
+padding: 1em;
+width:80%;
+font-size:1.4em;
+}
+
+}
