@@ -79,3 +79,20 @@ font-size:1.4em;
 }
 
 }
+
+
+@media  only screen 
+and (min-device-width: 813px) 
+and (max-device-width: 1400px)  {
+
+    .wrapper{
+        width:80%;
+       /*border:solid red 1px;*/
+       
+       }
+
+       .result{
+
+        width:80%
+       }
+}

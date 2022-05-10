@@ -24,3 +24,18 @@ gap: 1em;
 
 
 }
+
+@media  only screen 
+and (min-device-width: 813px) 
+and (max-device-width: 1400px)  {
+
+    .wrapper{
+        margin: 0 auto;
+        width: 80%;
+        padding: 0;
+        padding-top:  1em;
+        gap:2em
+    }
+
+
+}

@@ -38,4 +38,17 @@ gap: 10px;
 
   
 }
+@media  only screen 
+and (min-device-width: 813px) 
+and (max-device-width: 1400px)  {
+
+.Search{
+
+  width: 95%;  
+  margin: 0 auto;
+}
+
+
+}
+  
 

@@ -39,3 +39,16 @@ and (max-device-width: 812px){
 
 
 }
+
+@media  only screen 
+and (min-device-width: 813px) 
+and (max-device-width: 1400px)  {
+    .wrapper{
+
+        width:50%;
+        margin: 0 auto;
+        
+    }
+
+
+}
