@@ -11,7 +11,7 @@ const SearchButton = ({prop1 , apiCall}) => {
         return
     }else{
     let cityArray = city.split("")
-    console.log(cityArray) 
+   // console.log(cityArray) 
    cityArray.forEach((element)=>{
 
  if(isNaN(element)=== false){

@@ -26,7 +26,7 @@ fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${longAndLat.lat}&lon
 }
  
 
-console.log(dailyWeather)
+//console.log(dailyWeather)
 
  useEffect(()=>{
 
