@@ -8,13 +8,13 @@ const DailyResults = () => {
 
     let {result , dailyWeather} = useContext(SearchContext) 
     const [fourDays, setFourDays] = useState([])
- const[date ,setDate] = useState()
-    const [weekday, ] =useState(["Sunday" ,"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday" ,"Monday"])
+let[date ,setDate] = useState()
+    const [weekday, ] =useState(["Sunday" ,"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday" ,"Monday","Tuesday","Wednesday"])
    
 
 useEffect(()=>{
  setDate(new Date().getUTCDay()+1)
-        
+   
  
  if(dailyWeather){
 setFourDays(dailyWeather.splice(0,3))
@@ -25,21 +25,15 @@ setFourDays(dailyWeather.splice(0,3))
 
 
 
- if(date === 5){
-               
-        setDate(0)
- }
+ 
      
     
 
     return (
         <div className={style.wrapper}>
         {fourDays.map((day ,i=0)=>{
-
-        
-            
-            
-             return   <DailyForecast  key={i} picture={day.weather[0].icon} day={weekday[date+i]} temp={day.temp.day} low={day.temp.min} />   
+  
+             return   <DailyForecast  key={i} picture={day.weather[0].icon} day={weekday[date+i] } temp={day.temp.day} low={day.temp.min} />   
         })}
     
     
